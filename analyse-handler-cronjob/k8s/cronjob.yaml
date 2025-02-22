@@ -1,0 +1,39 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: auto-scaler-job
+  namespace: webshop
+spec:
+  schedule: "* * * * *" # Run every minute
+  startingDeadlineSeconds: 10 # Must start within 60 seconds of scheduled time
+  concurrencyPolicy: Replace # Replace existing job if it's still running
+  successfulJobsHistoryLimit: 3 # Keep history of last 3 successful jobs
+  failedJobsHistoryLimit: 1 # Keep history of last failed job
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          activeDeadlineSeconds: 30 # Job must complete within 30 seconds
+          containers:
+            - name: cron-job
+              image: docker.io/library/auto-scaler:latest
+              imagePullPolicy: IfNotPresent
+              env:
+                - name: PROMETHEUS_URL
+                  value: "http://prometheus-server.monitoring.svc.cluster.local:80"
+                - name: PUSHGATEWAY_URL
+                  value: "http://prometheus-prometheus-pushgateway.monitoring.svc.cluster.local:9091"
+                - name: PREDICTOR_URL
+                  value: "http://vanilla-scaler.webshop.svc.cluster.local:5001"
+                - name: METRICS_WINDOW
+                  value: "10m"
+                - name: PREDICTION_METRIC_NAME
+                  value: webshop_service_predicted_request_count
+              resources:
+                requests:
+                  memory: "64Mi"
+                  cpu: "100m"
+                limits:
+                  memory: "128Mi"
+                  cpu: "200m"
+          restartPolicy: OnFailure

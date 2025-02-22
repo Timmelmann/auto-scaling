@@ -1,0 +1,59 @@
+apiVersion: metrics.timmelmann.com/v1
+kind: MetricsOperator
+metadata:
+  labels:
+    app.kubernetes.io/name: timmelmann
+    app.kubernetes.io/managed-by: kustomize
+  name: metricsoperator
+  namespace: metrics-system
+spec:
+  collector:
+    endpointUrl: "http://prometheus-server.monitoring.svc.cluster.local:80"
+    metricsWindow: "12m"
+    step: "5m"
+    customQuery:
+      query: "istio_requests_total"
+      useServiceNames: true
+      useNamespace: true
+      labels:
+        - destination_app
+        - source_app
+        - reporter
+
+  # Analyzer configuration
+  analyzer:
+    endpointUrl: "http://vanilla-scaler.webshop.svc.cluster.local:5001"
+
+  # Pusher configuration
+  pusher:
+    endpointUrl: "http://prometheus-prometheus-pushgateway.monitoring.svc.cluster.local:9091"
+    metricName: "predicted_request_count_webshop"
+    jobName: "metrics_collection"
+
+  # Interval in seconds between metric collections
+  interval: "1m"
+
+  # List of applications to monitor
+  applications:
+    namespace: "webshop"
+    services:
+      - name: "adservice"
+        deploymentName: "adservice"
+      - name: "cartservice"
+        deploymentName: "cartservice"
+      - name: "checkoutservice"
+        deploymentName: "checkoutservice"
+      - name: "currencyservice"
+        deploymentName: "currencyservice"
+      - name: "emailservice"
+        deploymentName: "emailservice"
+      - name: "frontend"
+        deploymentName: "frontend"
+      - name: "paymentservice"
+        deploymentName: "paymentservice"
+      - name: "productcatalogservice"
+        deploymentName: "productcatalogservice"
+      - name: "recommendationservice"
+        deploymentName: "recommendationservice"
+      - name: "shippingservice"
+        deploymentName: "shippingservice"

@@ -1,0 +1,27 @@
+# cronjob.yaml
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: k6-load-test
+  namespace: webshop
+spec:
+  schedule: "0 0 * * *" # Run daily at midnight
+  concurrencyPolicy: Replace
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: k6
+              image: load-generator:latest
+              env:
+                - name: API_DOMAIN
+                  value: "http://frontend.webshop.svc.cluster.local:80" # Replace with your API endpoint
+              resources:
+                requests:
+                  cpu: "250m"
+                  memory: "256Mi"
+                limits:
+                  cpu: "500m"
+                  memory: "512Gi"
+          restartPolicy: OnFailure

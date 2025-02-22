@@ -1,0 +1,483 @@
+2025-01-25 20:48:08,983 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2025-01-25 20:48:09,024 INFO o.a.j.JMeter: Loading user properties from: /usr/local/Cellar/jmeter/5.6.3/libexec/bin/user.properties
+2025-01-25 20:48:09,026 INFO o.a.j.JMeter: Loading system properties from: /usr/local/Cellar/jmeter/5.6.3/libexec/bin/system.properties
+2025-01-25 20:48:09,038 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2025-01-25 20:48:09,039 INFO o.a.j.JMeter: Version 5.6.3
+2025-01-25 20:48:09,039 INFO o.a.j.JMeter: java.version=21.0.5
+2025-01-25 20:48:09,039 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2025-01-25 20:48:09,039 INFO o.a.j.JMeter: os.name=Mac OS X
+2025-01-25 20:48:09,039 INFO o.a.j.JMeter: os.arch=x86_64
+2025-01-25 20:48:09,039 INFO o.a.j.JMeter: os.version=15.1.1
+2025-01-25 20:48:09,039 INFO o.a.j.JMeter: file.encoding=UTF-8
+2025-01-25 20:48:09,039 INFO o.a.j.JMeter: java.awt.headless=true
+2025-01-25 20:48:09,039 INFO o.a.j.JMeter: Max memory     =1073741824
+2025-01-25 20:48:09,039 INFO o.a.j.JMeter: Available Processors =8
+2025-01-25 20:48:09,054 INFO o.a.j.JMeter: Default Locale=English (EN)
+2025-01-25 20:48:09,055 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2025-01-25 20:48:09,055 INFO o.a.j.JMeter: JMeterHome=/usr/local/Cellar/jmeter/5.6.3/libexec
+2025-01-25 20:48:09,055 INFO o.a.j.JMeter: user.dir  =/Users/TilmanBorst/Library/CloudStorage/OneDrive-Persönlich/Masterarbeit/code/scenarios
+2025-01-25 20:48:09,056 INFO o.a.j.JMeter: PWD       =/Users/TilmanBorst/Library/CloudStorage/OneDrive-Persönlich/Masterarbeit/code/scenarios
+2025-01-25 20:48:09,502 INFO o.a.j.JMeter: IP: 192.168.178.52 Name: MacBookAir.fritz.box FullName: macbookair.fritz.box
+2025-01-25 20:48:09,537 INFO o.a.j.s.FileServer: Default base='/Users/TilmanBorst/Library/CloudStorage/OneDrive-Persönlich/Masterarbeit/code/scenarios'
+2025-01-25 20:48:09,542 INFO o.a.j.s.FileServer: Set new base='/Users/TilmanBorst/Library/CloudStorage/OneDrive-Persönlich/Masterarbeit/code/scenarios'
+2025-01-25 20:48:10,853 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2025-01-25 20:48:10,920 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2025-01-25 20:48:10,925 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2025-01-25 20:48:10,928 INFO o.a.j.s.SaveService: Loading file: super_slow.jmx
+2025-01-25 20:48:10,989 INFO o.a.j.p.h.c.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_
+2025-01-25 20:48:11,000 INFO o.a.j.p.h.c.CacheManager: Will only cache the following methods: [GET]
+2025-01-25 20:48:11,092 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-01-25 20:48:11,093 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-01-25 20:48:11,093 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-01-25 20:48:11,093 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-01-25 20:48:11,093 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2025-01-25 20:48:11,094 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2025-01-25 20:48:11,262 INFO o.a.j.JMeter: Creating summariser <summary>
+2025-01-25 20:48:11,357 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-01-25 20:48:11,363 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-01-25 20:48:11,367 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-01-25 20:48:11,374 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2025-01-25 20:48:11,374 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2025-01-25 20:48:11,499 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-01-25 20:48:11,920 INFO o.a.j.JMeter: Running test (1737834491919)
+2025-01-25 20:48:12,018 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : AddStuffUsers
+2025-01-25 20:48:12,024 INFO o.a.j.e.StandardJMeterEngine: Starting 50 threads for group AddStuffUsers.
+2025-01-25 20:48:12,025 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-01-25 20:48:12,032 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=50 ramp-up=480 delayedStart=true
+2025-01-25 20:48:12,063 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2025-01-25 20:48:12,063 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : BuyStuffUsers
+2025-01-25 20:48:12,063 INFO o.a.j.e.StandardJMeterEngine: Starting 50 threads for group BuyStuffUsers.
+2025-01-25 20:48:12,064 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-01-25 20:48:12,064 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=50 ramp-up=600 delayedStart=true
+2025-01-25 20:48:12,065 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2025-01-25 20:48:12,067 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 3 : PlaceOrdersUsers
+2025-01-25 20:48:12,069 INFO o.a.j.e.StandardJMeterEngine: Starting 50 threads for group PlaceOrdersUsers.
+2025-01-25 20:48:12,070 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-01-25 20:48:12,070 INFO o.a.j.t.ThreadGroup: Starting thread group... number=3 threads=50 ramp-up=600 delayedStart=true
+2025-01-25 20:48:12,070 INFO o.a.j.t.ThreadGroup: Started thread group number 3
+2025-01-25 20:48:12,070 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 4 : LookForStuffUsers
+2025-01-25 20:48:12,075 INFO o.a.j.e.StandardJMeterEngine: Starting 50 threads for group LookForStuffUsers.
+2025-01-25 20:48:12,075 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-01-25 20:48:12,075 INFO o.a.j.t.ThreadGroup: Starting thread group... number=4 threads=50 ramp-up=600 delayedStart=true
+2025-01-25 20:48:12,076 INFO o.a.j.t.ThreadGroup: Started thread group number 4
+2025-01-25 20:48:12,076 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-01-25 20:48:12,291 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2025-01-25 20:48:12,296 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2025-01-25 20:48:12,297 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2025-01-25 20:48:12,298 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2025-01-25 20:48:12,300 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-1
+2025-01-25 20:48:12,300 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-1
+2025-01-25 20:48:12,300 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-1
+2025-01-25 20:48:12,301 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-1
+2025-01-25 20:48:12,390 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = MacBookAir.fritz.box
+2025-01-25 20:48:12,405 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2025-01-25 20:48:22,084 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-2
+2025-01-25 20:48:24,497 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-2
+2025-01-25 20:48:24,502 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-2
+2025-01-25 20:48:24,507 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-2
+2025-01-25 20:48:30,361 INFO o.a.j.r.Summariser: summary +     36 in 00:00:18 =    2,0/s Avg:     3 Min:     0 Max:    26 Err:    36 (100,00%) Active: 8 Started: 8 Finished: 0
+2025-01-25 20:48:31,883 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-3
+2025-01-25 20:48:36,741 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-3
+2025-01-25 20:48:36,750 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-3
+2025-01-25 20:48:36,756 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-3
+2025-01-25 20:48:41,707 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-4
+2025-01-25 20:48:48,077 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2025-01-25 20:48:48,078 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2025-01-25 20:48:48,993 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-4
+2025-01-25 20:48:48,999 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-4
+2025-01-25 20:48:49,002 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-4
+2025-01-25 20:48:51,504 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-5
+2025-01-25 20:49:00,528 INFO o.a.j.r.Summariser: summary +    104 in 00:00:30 =    3,4/s Avg:     2 Min:     0 Max:     9 Err:   104 (100,00%) Active: 17 Started: 17 Finished: 0
+2025-01-25 20:49:00,529 INFO o.a.j.r.Summariser: summary =    140 in 00:00:49 =    2,9/s Avg:     2 Min:     0 Max:    26 Err:   140 (100,00%)
+2025-01-25 20:49:01,234 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-5
+2025-01-25 20:49:01,244 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-5
+2025-01-25 20:49:01,246 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-5
+2025-01-25 20:49:01,290 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-6
+2025-01-25 20:49:11,093 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-7
+2025-01-25 20:49:13,482 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-6
+2025-01-25 20:49:13,486 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-6
+2025-01-25 20:49:13,494 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-6
+2025-01-25 20:49:20,895 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-8
+2025-01-25 20:49:25,727 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-7
+2025-01-25 20:49:25,729 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-7
+2025-01-25 20:49:25,742 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-7
+2025-01-25 20:49:30,193 INFO o.a.j.r.Summariser: summary +    150 in 00:00:30 =    5,1/s Avg:     2 Min:     0 Max:    17 Err:   150 (100,00%) Active: 29 Started: 29 Finished: 0
+2025-01-25 20:49:30,196 INFO o.a.j.r.Summariser: summary =    290 in 00:01:18 =    3,7/s Avg:     2 Min:     0 Max:    26 Err:   290 (100,00%)
+2025-01-25 20:49:30,689 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-9
+2025-01-25 20:49:37,990 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-8
+2025-01-25 20:49:37,990 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-8
+2025-01-25 20:49:37,990 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-8
+2025-01-25 20:49:40,501 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-10
+2025-01-25 20:49:50,236 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-9
+2025-01-25 20:49:50,236 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-9
+2025-01-25 20:49:50,236 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-9
+2025-01-25 20:49:50,294 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-11
+2025-01-25 20:49:59,179 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-1
+2025-01-25 20:49:59,180 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-1
+2025-01-25 20:50:00,085 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-12
+2025-01-25 20:50:00,097 INFO o.a.j.r.Summariser: summary +    219 in 00:00:30 =    7,3/s Avg:     2 Min:     0 Max:    86 Err:   219 (100,00%) Active: 38 Started: 39 Finished: 1
+2025-01-25 20:50:00,099 INFO o.a.j.r.Summariser: summary =    509 in 00:01:48 =    4,7/s Avg:     2 Min:     0 Max:    86 Err:   509 (100,00%)
+2025-01-25 20:50:02,476 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-10
+2025-01-25 20:50:02,476 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-10
+2025-01-25 20:50:02,481 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-10
+2025-01-25 20:50:08,666 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-2
+2025-01-25 20:50:08,668 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-2
+2025-01-25 20:50:09,880 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-13
+2025-01-25 20:50:14,729 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-11
+2025-01-25 20:50:14,729 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-11
+2025-01-25 20:50:14,729 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-11
+2025-01-25 20:50:18,406 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-3
+2025-01-25 20:50:18,412 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-3
+2025-01-25 20:50:19,680 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-14
+2025-01-25 20:50:26,967 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-12
+2025-01-25 20:50:26,972 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-12
+2025-01-25 20:50:26,970 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-12
+2025-01-25 20:50:28,231 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-4
+2025-01-25 20:50:28,231 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-4
+2025-01-25 20:50:29,475 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-15
+2025-01-25 20:50:30,124 INFO o.a.j.r.Summariser: summary +    271 in 00:00:30 =    9,0/s Avg:     1 Min:     0 Max:    11 Err:   271 (100,00%) Active: 47 Started: 51 Finished: 4
+2025-01-25 20:50:30,125 INFO o.a.j.r.Summariser: summary =    780 in 00:02:18 =    5,6/s Avg:     2 Min:     0 Max:    86 Err:   780 (100,00%)
+2025-01-25 20:50:38,083 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-5
+2025-01-25 20:50:38,085 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-5
+2025-01-25 20:50:39,209 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-13
+2025-01-25 20:50:39,213 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-13
+2025-01-25 20:50:39,214 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-13
+2025-01-25 20:50:39,266 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-16
+2025-01-25 20:50:47,880 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-6
+2025-01-25 20:50:47,884 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-6
+2025-01-25 20:50:49,076 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-17
+2025-01-25 20:50:51,461 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-14
+2025-01-25 20:50:51,460 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-14
+2025-01-25 20:50:51,456 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-14
+2025-01-25 20:50:57,578 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-7
+2025-01-25 20:50:57,581 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-7
+2025-01-25 20:50:58,878 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-18
+2025-01-25 20:51:00,230 INFO o.a.j.r.Summariser: summary +    306 in 00:00:30 =   10,2/s Avg:     1 Min:     0 Max:    32 Err:   306 (100,00%) Active: 53 Started: 60 Finished: 7
+2025-01-25 20:51:00,231 INFO o.a.j.r.Summariser: summary =   1086 in 00:02:48 =    6,5/s Avg:     2 Min:     0 Max:    86 Err:  1086 (100,00%)
+2025-01-25 20:51:00,963 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-1
+2025-01-25 20:51:00,963 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-1
+2025-01-25 20:51:03,699 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-15
+2025-01-25 20:51:03,705 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-15
+2025-01-25 20:51:03,710 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-15
+2025-01-25 20:51:07,434 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-8
+2025-01-25 20:51:07,435 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-8
+2025-01-25 20:51:08,678 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-19
+2025-01-25 20:51:13,081 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-2
+2025-01-25 20:51:13,083 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-2
+2025-01-25 20:51:15,958 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-16
+2025-01-25 20:51:15,964 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-16
+2025-01-25 20:51:15,958 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-16
+2025-01-25 20:51:17,169 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-9
+2025-01-25 20:51:17,169 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-9
+2025-01-25 20:51:18,478 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-20
+2025-01-25 20:51:25,303 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-3
+2025-01-25 20:51:25,305 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-3
+2025-01-25 20:51:26,950 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-10
+2025-01-25 20:51:26,951 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-10
+2025-01-25 20:51:28,208 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-17
+2025-01-25 20:51:28,208 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-17
+2025-01-25 20:51:28,208 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-17
+2025-01-25 20:51:28,264 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-21
+2025-01-25 20:51:30,067 INFO o.a.j.r.Summariser: summary +    315 in 00:00:30 =   10,6/s Avg:     1 Min:     0 Max:    22 Err:   315 (100,00%) Active: 59 Started: 72 Finished: 13
+2025-01-25 20:51:30,074 INFO o.a.j.r.Summariser: summary =   1401 in 00:03:18 =    7,1/s Avg:     2 Min:     0 Max:    86 Err:  1401 (100,00%)
+2025-01-25 20:51:36,772 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-11
+2025-01-25 20:51:36,778 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-11
+2025-01-25 20:51:37,518 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-4
+2025-01-25 20:51:37,519 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-4
+2025-01-25 20:51:38,066 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-22
+2025-01-25 20:51:40,444 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-18
+2025-01-25 20:51:40,444 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-18
+2025-01-25 20:51:40,444 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-18
+2025-01-25 20:51:46,575 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-12
+2025-01-25 20:51:46,577 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-12
+2025-01-25 20:51:47,851 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-23
+2025-01-25 20:51:49,793 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-5
+2025-01-25 20:51:49,797 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-5
+2025-01-25 20:51:52,693 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-19
+2025-01-25 20:51:52,693 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-19
+2025-01-25 20:51:52,693 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-19
+2025-01-25 20:51:56,363 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-13
+2025-01-25 20:51:56,366 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-13
+2025-01-25 20:51:57,644 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-24
+2025-01-25 20:52:00,062 INFO o.a.j.r.Summariser: summary +    336 in 00:00:30 =   11,2/s Avg:     1 Min:     0 Max:    14 Err:   336 (100,00%) Active: 63 Started: 81 Finished: 18
+2025-01-25 20:52:00,066 INFO o.a.j.r.Summariser: summary =   1737 in 00:03:48 =    7,6/s Avg:     1 Min:     0 Max:    86 Err:  1737 (100,00%)
+2025-01-25 20:52:02,032 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-6
+2025-01-25 20:52:02,033 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-6
+2025-01-25 20:52:04,936 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-20
+2025-01-25 20:52:04,936 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-20
+2025-01-25 20:52:04,936 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-20
+2025-01-25 20:52:06,132 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-14
+2025-01-25 20:52:06,133 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-14
+2025-01-25 20:52:07,435 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-25
+2025-01-25 20:52:14,235 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-7
+2025-01-25 20:52:14,237 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-7
+2025-01-25 20:52:15,960 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-15
+2025-01-25 20:52:15,960 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-15
+2025-01-25 20:52:17,177 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-21
+2025-01-25 20:52:17,177 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-21
+2025-01-25 20:52:17,177 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-21
+2025-01-25 20:52:17,226 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-26
+2025-01-25 20:52:25,754 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-16
+2025-01-25 20:52:25,756 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-16
+2025-01-25 20:52:26,520 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-8
+2025-01-25 20:52:26,520 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-8
+2025-01-25 20:52:27,022 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-27
+2025-01-25 20:52:29,420 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-22
+2025-01-25 20:52:29,420 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-22
+2025-01-25 20:52:29,420 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-22
+2025-01-25 20:52:30,033 INFO o.a.j.r.Summariser: summary +    364 in 00:00:30 =   12,1/s Avg:     1 Min:     0 Max:    12 Err:   364 (100,00%) Active: 69 Started: 93 Finished: 24
+2025-01-25 20:52:30,034 INFO o.a.j.r.Summariser: summary =   2101 in 00:04:18 =    8,1/s Avg:     1 Min:     0 Max:    86 Err:  2101 (100,00%)
+2025-01-25 20:52:35,559 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-17
+2025-01-25 20:52:35,566 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-17
+2025-01-25 20:52:36,816 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-28
+2025-01-25 20:52:38,709 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-9
+2025-01-25 20:52:38,711 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-9
+2025-01-25 20:52:41,664 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-23
+2025-01-25 20:52:41,665 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-23
+2025-01-25 20:52:41,664 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-23
+2025-01-25 20:52:45,344 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-18
+2025-01-25 20:52:45,344 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-18
+2025-01-25 20:52:46,608 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-29
+2025-01-25 20:52:50,970 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-10
+2025-01-25 20:52:50,974 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-10
+2025-01-25 20:52:53,916 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-24
+2025-01-25 20:52:53,916 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-24
+2025-01-25 20:52:53,916 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-24
+2025-01-25 20:52:55,135 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-19
+2025-01-25 20:52:55,136 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-19
+2025-01-25 20:52:56,398 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-30
+2025-01-25 20:53:00,146 INFO o.a.j.r.Summariser: summary +    372 in 00:00:30 =   12,4/s Avg:     1 Min:     0 Max:     5 Err:   372 (100,00%) Active: 73 Started: 102 Finished: 29
+2025-01-25 20:53:00,150 INFO o.a.j.r.Summariser: summary =   2473 in 00:04:48 =    8,6/s Avg:     1 Min:     0 Max:    86 Err:  2473 (100,00%)
+2025-01-25 20:53:03,263 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-11
+2025-01-25 20:53:03,264 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-11
+2025-01-25 20:53:04,955 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-20
+2025-01-25 20:53:04,958 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-20
+2025-01-25 20:53:06,167 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-25
+2025-01-25 20:53:06,167 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-25
+2025-01-25 20:53:06,178 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-25
+2025-01-25 20:53:06,193 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-31
+2025-01-25 20:53:14,740 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-21
+2025-01-25 20:53:14,755 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-21
+2025-01-25 20:53:15,464 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-12
+2025-01-25 20:53:15,468 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-12
+2025-01-25 20:53:15,983 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-32
+2025-01-25 20:53:18,402 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-26
+2025-01-25 20:53:18,402 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-26
+2025-01-25 20:53:18,402 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-26
+2025-01-25 20:53:24,536 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-22
+2025-01-25 20:53:24,539 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-22
+2025-01-25 20:53:25,775 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-33
+2025-01-25 20:53:27,686 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-13
+2025-01-25 20:53:27,692 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-13
+2025-01-25 20:53:30,108 INFO o.a.j.r.Summariser: summary +    372 in 00:00:30 =   12,4/s Avg:     1 Min:     0 Max:    43 Err:   372 (100,00%) Active: 76 Started: 111 Finished: 35
+2025-01-25 20:53:30,115 INFO o.a.j.r.Summariser: summary =   2845 in 00:05:18 =    8,9/s Avg:     1 Min:     0 Max:    86 Err:  2845 (100,00%)
+2025-01-25 20:53:30,655 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-27
+2025-01-25 20:53:30,655 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-27
+2025-01-25 20:53:30,655 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-27
+2025-01-25 20:53:30,699 INFO o.a.j.t.JMeterThread: Thread is done: PlaceOrdersUsers 3-1
+2025-01-25 20:53:30,699 INFO o.a.j.t.JMeterThread: Thread finished: PlaceOrdersUsers 3-1
+2025-01-25 20:53:34,300 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-23
+2025-01-25 20:53:34,307 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-23
+2025-01-25 20:53:35,565 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-34
+2025-01-25 20:53:39,966 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-14
+2025-01-25 20:53:39,968 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-14
+2025-01-25 20:53:42,904 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-28
+2025-01-25 20:53:42,904 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-28
+2025-01-25 20:53:42,904 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-28
+2025-01-25 20:53:42,952 INFO o.a.j.t.JMeterThread: Thread is done: PlaceOrdersUsers 3-2
+2025-01-25 20:53:42,957 INFO o.a.j.t.JMeterThread: Thread finished: PlaceOrdersUsers 3-2
+2025-01-25 20:53:44,108 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-24
+2025-01-25 20:53:44,109 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-24
+2025-01-25 20:53:45,354 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-35
+2025-01-25 20:53:52,176 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-15
+2025-01-25 20:53:52,179 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-15
+2025-01-25 20:53:53,885 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-25
+2025-01-25 20:53:53,885 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-25
+2025-01-25 20:53:55,069 INFO o.a.j.t.JMeterThread: Thread is done: PlaceOrdersUsers 3-3
+2025-01-25 20:53:55,070 INFO o.a.j.t.JMeterThread: Thread finished: PlaceOrdersUsers 3-3
+2025-01-25 20:53:55,148 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-29
+2025-01-25 20:53:55,148 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-29
+2025-01-25 20:53:55,148 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-36
+2025-01-25 20:53:55,170 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-29
+2025-01-25 20:54:00,216 INFO o.a.j.r.Summariser: summary +    382 in 00:00:30 =   12,7/s Avg:     1 Min:     0 Max:     6 Err:   382 (100,00%) Active: 80 Started: 123 Finished: 43
+2025-01-25 20:54:00,218 INFO o.a.j.r.Summariser: summary =   3227 in 00:05:48 =    9,3/s Avg:     1 Min:     0 Max:    86 Err:  3227 (100,00%)
+2025-01-25 20:54:03,694 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-26
+2025-01-25 20:54:03,696 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-26
+2025-01-25 20:54:04,459 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-16
+2025-01-25 20:54:04,460 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-16
+2025-01-25 20:54:04,939 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-37
+2025-01-25 20:54:07,303 INFO o.a.j.t.JMeterThread: Thread is done: PlaceOrdersUsers 3-4
+2025-01-25 20:54:07,305 INFO o.a.j.t.JMeterThread: Thread finished: PlaceOrdersUsers 3-4
+2025-01-25 20:54:07,387 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-30
+2025-01-25 20:54:07,396 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-30
+2025-01-25 20:54:07,415 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-30
+2025-01-25 20:54:13,502 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-27
+2025-01-25 20:54:13,504 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-27
+2025-01-25 20:54:14,729 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-38
+2025-01-25 20:54:16,682 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-17
+2025-01-25 20:54:16,687 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-17
+2025-01-25 20:54:19,505 INFO o.a.j.t.JMeterThread: Thread is done: PlaceOrdersUsers 3-5
+2025-01-25 20:54:19,507 INFO o.a.j.t.JMeterThread: Thread finished: PlaceOrdersUsers 3-5
+2025-01-25 20:54:19,628 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-31
+2025-01-25 20:54:19,636 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-31
+2025-01-25 20:54:19,645 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-31
+2025-01-25 20:54:23,277 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-28
+2025-01-25 20:54:23,284 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-28
+2025-01-25 20:54:24,522 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-39
+2025-01-25 20:54:28,946 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-18
+2025-01-25 20:54:28,948 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-18
+2025-01-25 20:54:30,119 INFO o.a.j.r.Summariser: summary +    383 in 00:00:30 =   12,8/s Avg:     1 Min:     0 Max:     9 Err:   383 (100,00%) Active: 81 Started: 132 Finished: 51
+2025-01-25 20:54:30,120 INFO o.a.j.r.Summariser: summary =   3610 in 00:06:18 =    9,5/s Avg:     1 Min:     0 Max:    86 Err:  3610 (100,00%)
+2025-01-25 20:54:31,816 INFO o.a.j.t.JMeterThread: Thread is done: PlaceOrdersUsers 3-6
+2025-01-25 20:54:31,816 INFO o.a.j.t.JMeterThread: Thread finished: PlaceOrdersUsers 3-6
+2025-01-25 20:54:31,873 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-32
+2025-01-25 20:54:31,873 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-32
+2025-01-25 20:54:31,883 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-32
+2025-01-25 20:54:33,049 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-29
+2025-01-25 20:54:33,049 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-29
+2025-01-25 20:54:34,301 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-40
+2025-01-25 20:54:41,129 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-19
+2025-01-25 20:54:41,131 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-19
+2025-01-25 20:54:42,844 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-30
+2025-01-25 20:54:42,845 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-30
+2025-01-25 20:54:44,034 INFO o.a.j.t.JMeterThread: Thread is done: PlaceOrdersUsers 3-7
+2025-01-25 20:54:44,036 INFO o.a.j.t.JMeterThread: Thread finished: PlaceOrdersUsers 3-7
+2025-01-25 20:54:44,084 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-41
+2025-01-25 20:54:44,108 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-33
+2025-01-25 20:54:44,111 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-33
+2025-01-25 20:54:44,121 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-33
+2025-01-25 20:54:52,647 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-31
+2025-01-25 20:54:52,650 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-31
+2025-01-25 20:54:53,444 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-20
+2025-01-25 20:54:53,444 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-20
+2025-01-25 20:54:53,869 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-42
+2025-01-25 20:54:56,294 INFO o.a.j.t.JMeterThread: Thread is done: PlaceOrdersUsers 3-8
+2025-01-25 20:54:56,304 INFO o.a.j.t.JMeterThread: Thread finished: PlaceOrdersUsers 3-8
+2025-01-25 20:54:56,343 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-34
+2025-01-25 20:54:56,346 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-34
+2025-01-25 20:54:56,360 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-34
+2025-01-25 20:55:00,015 INFO o.a.j.r.Summariser: summary +    387 in 00:00:30 =   12,9/s Avg:     1 Min:     0 Max:    13 Err:   387 (100,00%) Active: 85 Started: 144 Finished: 59
+2025-01-25 20:55:00,026 INFO o.a.j.r.Summariser: summary =   3997 in 00:06:48 =    9,8/s Avg:     1 Min:     0 Max:    86 Err:  3997 (100,00%)
+2025-01-25 20:55:02,438 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-32
+2025-01-25 20:55:02,440 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-32
+2025-01-25 20:55:03,655 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-43
+2025-01-25 20:55:05,691 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-21
+2025-01-25 20:55:05,693 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-21
+2025-01-25 20:55:08,464 INFO o.a.j.t.JMeterThread: Thread is done: PlaceOrdersUsers 3-9
+2025-01-25 20:55:08,466 INFO o.a.j.t.JMeterThread: Thread finished: PlaceOrdersUsers 3-9
+2025-01-25 20:55:08,579 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-35
+2025-01-25 20:55:08,580 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-35
+2025-01-25 20:55:08,598 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-35
+2025-01-25 20:55:12,202 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-33
+2025-01-25 20:55:12,209 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-33
+2025-01-25 20:55:13,431 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-44
+2025-01-25 20:55:17,882 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-22
+2025-01-25 20:55:17,887 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-22
+2025-01-25 20:55:20,702 INFO o.a.j.t.JMeterThread: Thread is done: PlaceOrdersUsers 3-10
+2025-01-25 20:55:20,703 INFO o.a.j.t.JMeterThread: Thread finished: PlaceOrdersUsers 3-10
+2025-01-25 20:55:20,821 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-36
+2025-01-25 20:55:20,821 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-36
+2025-01-25 20:55:20,833 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-36
+2025-01-25 20:55:22,005 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-34
+2025-01-25 20:55:22,009 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-34
+2025-01-25 20:55:23,217 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-45
+2025-01-25 20:55:30,164 INFO o.a.j.r.Summariser: summary +    401 in 00:00:30 =   13,3/s Avg:     1 Min:     0 Max:    94 Err:   401 (100,00%) Active: 87 Started: 153 Finished: 66
+2025-01-25 20:55:30,167 INFO o.a.j.r.Summariser: summary =   4398 in 00:07:18 =   10,0/s Avg:     1 Min:     0 Max:    94 Err:  4398 (100,00%)
+2025-01-25 20:55:30,170 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-23
+2025-01-25 20:55:30,174 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-23
+2025-01-25 20:55:31,807 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-35
+2025-01-25 20:55:31,815 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-35
+2025-01-25 20:55:32,995 INFO o.a.j.t.JMeterThread: Thread is done: PlaceOrdersUsers 3-11
+2025-01-25 20:55:32,996 INFO o.a.j.t.JMeterThread: Thread finished: PlaceOrdersUsers 3-11
+2025-01-25 20:55:32,994 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-46
+2025-01-25 20:55:33,059 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-37
+2025-01-25 20:55:33,059 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-37
+2025-01-25 20:55:33,071 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-37
+2025-01-25 20:55:41,612 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-36
+2025-01-25 20:55:41,616 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-36
+2025-01-25 20:55:42,373 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-24
+2025-01-25 20:55:42,373 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-24
+2025-01-25 20:55:42,770 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-47
+2025-01-25 20:55:45,247 INFO o.a.j.t.JMeterThread: Thread is done: PlaceOrdersUsers 3-12
+2025-01-25 20:55:45,248 INFO o.a.j.t.JMeterThread: Thread finished: PlaceOrdersUsers 3-12
+2025-01-25 20:55:45,295 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-38
+2025-01-25 20:55:45,295 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-38
+2025-01-25 20:55:45,304 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-38
+2025-01-25 20:55:51,396 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-37
+2025-01-25 20:55:51,398 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-37
+2025-01-25 20:55:52,537 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-48
+2025-01-25 20:55:54,635 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-25
+2025-01-25 20:55:54,635 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-25
+2025-01-25 20:55:57,468 INFO o.a.j.t.JMeterThread: Thread is done: PlaceOrdersUsers 3-13
+2025-01-25 20:55:57,469 INFO o.a.j.t.JMeterThread: Thread finished: PlaceOrdersUsers 3-13
+2025-01-25 20:55:57,537 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-39
+2025-01-25 20:55:57,537 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-39
+2025-01-25 20:55:57,544 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-39
+2025-01-25 20:56:00,065 INFO o.a.j.r.Summariser: summary +    398 in 00:00:30 =   13,3/s Avg:     1 Min:     0 Max:     8 Err:   398 (100,00%) Active: 90 Started: 165 Finished: 75
+2025-01-25 20:56:00,065 INFO o.a.j.r.Summariser: summary =   4796 in 00:07:48 =   10,2/s Avg:     1 Min:     0 Max:    94 Err:  4796 (100,00%)
+2025-01-25 20:56:01,160 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-38
+2025-01-25 20:56:01,160 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-38
+2025-01-25 20:56:02,309 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-49
+2025-01-25 20:56:06,947 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-26
+2025-01-25 20:56:06,949 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-26
+2025-01-25 20:56:09,698 INFO o.a.j.t.JMeterThread: Thread is done: PlaceOrdersUsers 3-14
+2025-01-25 20:56:09,700 INFO o.a.j.t.JMeterThread: Thread finished: PlaceOrdersUsers 3-14
+2025-01-25 20:56:09,771 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-40
+2025-01-25 20:56:09,772 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-40
+2025-01-25 20:56:09,779 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-40
+2025-01-25 20:56:10,988 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-39
+2025-01-25 20:56:10,990 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-39
+2025-01-25 20:56:12,068 INFO o.a.j.t.JMeterThread: Thread started: AddStuffUsers 1-50
+2025-01-25 20:56:19,114 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-27
+2025-01-25 20:56:19,117 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-27
+2025-01-25 20:56:20,759 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-40
+2025-01-25 20:56:20,759 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-40
+2025-01-25 20:56:21,944 INFO o.a.j.t.JMeterThread: Thread is done: PlaceOrdersUsers 3-15
+2025-01-25 20:56:21,946 INFO o.a.j.t.JMeterThread: Thread finished: PlaceOrdersUsers 3-15
+2025-01-25 20:56:22,000 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-41
+2025-01-25 20:56:22,002 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-41
+2025-01-25 20:56:22,011 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-41
+2025-01-25 20:56:30,148 INFO o.a.j.r.Summariser: summary +    405 in 00:00:30 =   13,5/s Avg:     1 Min:     0 Max:    37 Err:   405 (100,00%) Active: 91 Started: 173 Finished: 82
+2025-01-25 20:56:30,149 INFO o.a.j.r.Summariser: summary =   5201 in 00:08:18 =   10,4/s Avg:     1 Min:     0 Max:    94 Err:  5201 (100,00%)
+2025-01-25 20:56:30,543 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-41
+2025-01-25 20:56:30,543 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-41
+2025-01-25 20:56:31,376 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-28
+2025-01-25 20:56:31,376 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-28
+2025-01-25 20:56:34,220 INFO o.a.j.t.JMeterThread: Thread is done: PlaceOrdersUsers 3-16
+2025-01-25 20:56:34,221 INFO o.a.j.t.JMeterThread: Thread finished: PlaceOrdersUsers 3-16
+2025-01-25 20:56:34,238 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-42
+2025-01-25 20:56:34,238 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-42
+2025-01-25 20:56:34,249 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-42
+2025-01-25 20:56:40,301 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-42
+2025-01-25 20:56:40,303 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-42
+2025-01-25 20:56:43,666 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-29
+2025-01-25 20:56:43,668 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-29
+2025-01-25 20:56:46,433 INFO o.a.j.t.JMeterThread: Thread is done: PlaceOrdersUsers 3-17
+2025-01-25 20:56:46,437 INFO o.a.j.t.JMeterThread: Thread finished: PlaceOrdersUsers 3-17
+2025-01-25 20:56:46,474 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-43
+2025-01-25 20:56:46,474 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-43
+2025-01-25 20:56:46,479 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-43
+2025-01-25 20:56:50,123 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-43
+2025-01-25 20:56:50,124 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-43
+2025-01-25 20:56:55,902 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-30
+2025-01-25 20:56:55,905 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-30
+2025-01-25 20:56:58,709 INFO o.a.j.t.JMeterThread: Thread is done: PlaceOrdersUsers 3-18
+2025-01-25 20:56:58,709 INFO o.a.j.t.JMeterThread: Thread finished: PlaceOrdersUsers 3-18
+2025-01-25 20:56:58,709 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-44
+2025-01-25 20:56:58,709 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-44
+2025-01-25 20:56:58,709 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-44
+2025-01-25 20:56:59,866 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-44
+2025-01-25 20:56:59,867 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-44
+2025-01-25 20:57:00,028 INFO o.a.j.r.Summariser: summary +    379 in 00:00:30 =   12,7/s Avg:     1 Min:     0 Max:    14 Err:   379 (100,00%) Active: 90 Started: 182 Finished: 92
+2025-01-25 20:57:00,029 INFO o.a.j.r.Summariser: summary =   5580 in 00:08:48 =   10,6/s Avg:     1 Min:     0 Max:    94 Err:  5580 (100,00%)
+2025-01-25 20:57:08,141 INFO o.a.j.t.JMeterThread: Thread is done: LookForStuffUsers 4-31
+2025-01-25 20:57:08,142 INFO o.a.j.t.JMeterThread: Thread finished: LookForStuffUsers 4-31
+2025-01-25 20:57:09,663 INFO o.a.j.t.JMeterThread: Thread is done: AddStuffUsers 1-45
+2025-01-25 20:57:09,664 INFO o.a.j.t.JMeterThread: Thread finished: AddStuffUsers 1-45
+2025-01-25 20:57:10,922 INFO o.a.j.t.JMeterThread: Thread is done: PlaceOrdersUsers 3-19
+2025-01-25 20:57:10,923 INFO o.a.j.t.JMeterThread: Thread finished: PlaceOrdersUsers 3-19
+2025-01-25 20:57:10,938 INFO o.a.j.t.JMeterThread: Thread started: BuyStuffUsers 2-45
+2025-01-25 20:57:10,942 INFO o.a.j.t.JMeterThread: Thread started: LookForStuffUsers 4-45
+2025-01-25 20:57:10,938 INFO o.a.j.t.JMeterThread: Thread started: PlaceOrdersUsers 3-45
+2025-01-25 20:57:16,928 INFO o.a.j.r.ResultCollector: Shutdown hook started
+2025-01-25 20:57:16,935 INFO o.a.j.r.ResultCollector: Shutdown hook ended

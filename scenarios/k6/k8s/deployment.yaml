@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k6-load-test
+  namespace: webshop
+  labels:
+    app: k6-load-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k6-load-test
+  template:
+    metadata:
+      labels:
+        app: k6-load-test
+    spec:
+      containers:
+      - name: k6
+        image: load-generator:latest  # Replace with your image
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: API_DOMAIN
+          value: "http://frontend.webshop.svc.cluster.local:80" 
+        resources:
+                requests:
+                  cpu: "250m"
+                  memory: "256Mi"
+                limits:
+                  cpu: "500m"
+                  memory: "512Gi"

@@ -1,0 +1,28 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: shippingservice-hpa
+  namespace: webshop
+spec:
+  # Reference the workload you want to scale (e.g., a Deployment)
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: shippingservice
+  minReplicas: 1
+  maxReplicas: 10
+  metrics:
+    - type: External
+      external:
+        metric:
+          # This is the name of your custom metric
+          name: "webshop_service_predicted_request_count"
+          # Label selector to match specific metrics
+          selector:
+            matchLabels:
+              service: "shippingservice"
+        target:
+          # Possible values for type: "AverageValue", "Value"
+          type: Value
+          # The target value you want to maintain for the average across pods
+          value: "1000"
