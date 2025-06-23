@@ -1,4 +1,4 @@
-package prometheus
+package collector
 
 import (
 	"context"
@@ -13,20 +13,27 @@ import (
 	"timmelmann/analyse-handler/internal/core/domain"
 )
 
-type Client struct {
-	api               v1.API
-	metricWindow      time.Duration
-	step              time.Duration
-	useNameSpace      bool
-	useServiceNames   bool
-	query             string
-	customQueryValues []domain.CustomQueryValues
-	labels            []string
+type ClientConfig struct {
+	Url             string
+	MetricWindow    string
+	StepDuration    string
+	Query           string
+	Namespace       string
+	Labels          []string
+	Services        []domain.Service
 }
 
-func NewClient(url, metricWindow, stepDuration, query string, useNamespace, useServiceNames bool, customQueryValues []domain.CustomQueryValues, labels []string) (*Client, error) {
+type Client struct {
+	api          v1.API
+	metricWindow time.Duration
+	step         time.Duration
+	query        string
+	labels       []string
+}
+
+func NewClient(clientConfig ClientConfig) (*Client, error) {
 	config := api.Config{
-		Address: url,
+		Address: clientConfig.Url,
 	}
 
 	client, err := api.NewClient(config)
@@ -34,66 +41,34 @@ func NewClient(url, metricWindow, stepDuration, query string, useNamespace, useS
 		return nil, err
 	}
 
-	window, err := time.ParseDuration(metricWindow)
+	window, err := time.ParseDuration(clientConfig.MetricWindow)
 	if err != nil {
 		return nil, err
 	}
 
-	step, err := time.ParseDuration(stepDuration)
+	step, err := time.ParseDuration(clientConfig.StepDuration)
 	if err != nil {
 		return nil, err
 	}
 
-	return &Client{
-		api:               v1.NewAPI(client),
-		metricWindow:      window,
-		step:              step,
-		query:             query,
-		useNameSpace:      useNamespace,
-		useServiceNames:   useServiceNames,
-		customQueryValues: customQueryValues,
-		labels:            labels,
-	}, nil
-}
-
-func (c *Client) CollectMetrics(ctx context.Context, namespace string, services []domain.Service) ([]domain.Metric, error) {
 	var serviceNames []string
-	for _, service := range services {
-		fmt.Println("Service Name", service.Name)
+	for _, service := range clientConfig.Services {
 		serviceNames = append(serviceNames, service.Name)
 	}
 	joinedServiceNames := strings.Join(serviceNames, "|")
-	fmt.Println("Joined Services", joinedServiceNames)
-	queryComplet := fmt.Sprintf(`%s{namespace="%s",app=~"%s"}`, c.query, namespace, joinedServiceNames)
-	return c.requestMetrics(ctx, queryComplet)
+	queryComplet := fmt.Sprintf(`%s{namespace="%s",app=~"%s"}`, clientConfig.Query, clientConfig.Namespace, joinedServiceNames)
+	fmt.Printf("Query: %s\n", queryComplet)
+	return &Client{
+		api:          v1.NewAPI(client),
+		metricWindow: window,
+		step:         step,
+		query:        queryComplet,
+		labels:       clientConfig.Labels,
+	}, nil
 }
 
-func (c *Client) CollectMetricsByCompleteQuery(ctx context.Context) ([]domain.Metric, error) {
-	return c.requestMetrics(ctx, c.query)
-}
-
-func (c *Client) CollectMetricsWithBuildQuery(ctx context.Context, query, namespace string, services []domain.Service) ([]domain.Metric, error) {
-	var queryKeys = ""
-	if c.useServiceNames {
-		queryKeys = fmt.Sprintf("namespace=%s", namespace)
-	}
-	if c.useServiceNames {
-		var serviceNames []string
-		for _, service := range services {
-			fmt.Println("Service Name", service.Name)
-			serviceNames = append(serviceNames, service.Name)
-		}
-		joinedServiceNames := strings.Join(serviceNames, "|")
-		queryKeys = fmt.Sprintf("%s,app=%s", queryKeys, joinedServiceNames)
-	}
-	if queryKeys != "" {
-		query = fmt.Sprintf("%s{%s}", query, queryKeys)
-	}
-	return c.requestMetrics(ctx, query)
-}
-
-func (c *Client) requestMetrics(ctx context.Context, query string) ([]domain.Metric, error) {
-	result, err := c.queryRange(ctx, query)
+func (c *Client) CollectMetrics(ctx context.Context) ([]domain.Metric, error) {
+	result, err := c.queryRange(ctx, c.query)
 	if err != nil {
 		return nil, err
 	}
@@ -107,12 +82,10 @@ func (c *Client) queryRange(ctx context.Context, query string) (model.Matrix, er
 		End:   end,
 		Step:  c.step,
 	}
-
 	result, _, err := c.api.QueryRange(ctx, query, r)
 	if err != nil {
 		return nil, err
 	}
-
 	return result.(model.Matrix), nil
 }
 

@@ -14,148 +14,157 @@ spec:
     singular: metricsoperator
   scope: Namespaced
   versions:
-    - name: v1
-      schema:
-        openAPIV3Schema:
-          description: MetricsOperator is the Schema for the metricsoperators API.
-          properties:
-            apiVersion:
-              description: |-
-                APIVersion defines the versioned schema of this representation of an object.
-                Servers should convert recognized schemas to the latest internal value, and
-                may reject unrecognized values.
-                More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-              type: string
-            kind:
-              description: |-
-                Kind is a string value representing the REST resource this object represents.
-                Servers may infer this from the endpoint the client submits requests to.
-                Cannot be updated.
-                In CamelCase.
-                More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-              type: string
-            metadata:
-              type: object
-            spec:
-              description: MetricsOperatorSpec defines the desired state of MetricsOperator.
-              properties:
-                analyzer:
-                  properties:
-                    endpointUrl:
-                      type: string
-                  required:
-                    - endpointUrl
-                  type: object
-                applications:
-                  properties:
-                    namespace:
-                      description: Name der Applikation
-                      type: string
-                    services:
-                      items:
-                        properties:
-                          deploymentName:
-                            type: string
-                          name:
-                            type: string
-                        required:
-                          - deploymentName
-                          - name
-                        type: object
-                      type: array
-                  required:
-                    - namespace
-                    - services
-                  type: object
-                collector:
-                  description:
-                    Foo is an example field of MetricsOperator. Edit metricsoperator_types.go
-                    to remove/update
-                  properties:
-                    customQuery:
+  - name: v1
+    schema:
+      openAPIV3Schema:
+        description: MetricsOperator is the Schema for the metricsoperators API.
+        properties:
+          apiVersion:
+            description: |-
+              APIVersion defines the versioned schema of this representation of an object.
+              Servers should convert recognized schemas to the latest internal value, and
+              may reject unrecognized values.
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+            type: string
+          kind:
+            description: |-
+              Kind is a string value representing the REST resource this object represents.
+              Servers may infer this from the endpoint the client submits requests to.
+              Cannot be updated.
+              In CamelCase.
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: MetricsOperatorSpec defines the desired state of MetricsOperator.
+            properties:
+              analyzer:
+                properties:
+                  endpointUrl:
+                    type: string
+                required:
+                - endpointUrl
+                type: object
+              applications:
+                properties:
+                  namespace:
+                    description: Name der Applikation
+                    type: string
+                  services:
+                    items:
                       properties:
-                        customQueryValues:
-                          items:
-                            properties:
-                              name:
-                                type: string
-                              values:
-                                items:
-                                  type: string
-                                type: array
-                            required:
-                              - name
-                              - values
-                            type: object
-                          type: array
-                        labels:
-                          items:
-                            type: string
-                          type: array
-                        query:
+                        deploymentName:
                           type: string
-                        useNamespace:
-                          type: boolean
-                        useServiceNames:
-                          type: boolean
+                        maxReplicas:
+                          format: int32
+                          type: integer
+                        minReplicas:
+                          format: int32
+                          type: integer
+                        name:
+                          type: string
+                        targetType:
+                          type: string
+                        targetValue:
+                          format: int32
+                          type: integer
                       required:
-                        - labels
-                        - query
-                        - useNamespace
-                        - useServiceNames
+                      - deploymentName
+                      - maxReplicas
+                      - minReplicas
+                      - name
+                      - targetType
+                      - targetValue
                       type: object
-                    endpointUrl:
-                      type: string
-                    metricsWindow:
-                      type: string
-                    step:
-                      type: string
-                  required:
-                    - endpointUrl
-                    - metricsWindow
-                    - step
-                  type: object
-                interval:
-                  type: string
-                pusher:
-                  properties:
-                    endpointUrl:
-                      type: string
-                    jobName:
-                      type: string
-                    metricName:
-                      type: string
-                  required:
-                    - endpointUrl
-                    - jobName
-                    - metricName
-                  type: object
-              required:
-                - analyzer
-                - applications
-                - collector
-                - interval
-                - pusher
-              type: object
-            status:
-              description: MetricsOperatorStatus defines the observed state of MetricsOperator.
-              properties:
-                error:
-                  description: Fehlermeldung falls etwas schief ging
-                  type: string
-                lastCollectionTime:
-                  format: date-time
-                  type: string
-                phase:
-                  description: Aktueller Status des Collectors
-                  enum:
-                    - Starting
-                    - Running
-                    - Failed
-                  type: string
-              type: object
-          type: object
-      served: true
-      storage: true
-      subresources:
-        status: {}
+                    type: array
+                required:
+                - namespace
+                - services
+                type: object
+              collector:
+                description: Foo is an example field of MetricsOperator. Edit metricsoperator_types.go
+                  to remove/update
+                properties:
+                  customQuery:
+                    properties:
+                      labels:
+                        items:
+                          type: string
+                        type: array
+                      query:
+                        type: string
+                    required:
+                    - labels
+                    - query
+                    type: object
+                  endpointUrl:
+                    type: string
+                  metricsWindow:
+                    type: string
+                  step:
+                    type: string
+                required:
+                - endpointUrl
+                - metricsWindow
+                - step
+                type: object
+              interval:
+                type: string
+              maxRetries:
+                type: integer
+              pusher:
+                properties:
+                  endpointUrl:
+                    type: string
+                  jobName:
+                    type: string
+                  metricName:
+                    type: string
+                required:
+                - endpointUrl
+                - jobName
+                - metricName
+                type: object
+            required:
+            - analyzer
+            - applications
+            - collector
+            - interval
+            - maxRetries
+            - pusher
+            type: object
+          status:
+            description: MetricsOperatorStatus defines the observed state of MetricsOperator.
+            properties:
+              error:
+                description: Fehlermeldung falls etwas schief ging
+                type: string
+              failureMessage:
+                type: string
+              failureReason:
+                type: string
+              lastCollectionTime:
+                format: date-time
+                type: string
+              lastFailureTime:
+                type: string
+              maxRetries:
+                type: integer
+              phase:
+                description: Aktueller Status des Collectors
+                enum:
+                - Starting
+                - Running
+                - Failed
+                type: string
+              retryCount:
+                type: integer
+              state:
+                type: string
+            type: object
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}

@@ -1,8 +1,6 @@
 package pushgateway
 
 import (
-	"math"
-
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/push"
 
@@ -18,8 +16,6 @@ type Client struct {
 
 func NewClient(pushgatewayURL, metricsName, jobName string) *Client {
 	registry := prometheus.NewRegistry()
-
-	// Create a gauge vector with service label
 	requestGauge := prometheus.NewGaugeVec(
 		prometheus.GaugeOpts{
 			Name: metricsName,
@@ -40,7 +36,7 @@ func NewClient(pushgatewayURL, metricsName, jobName string) *Client {
 
 func (c *Client) PublishScalingPrediction(httpMetrics domain.ScalingPrediction, namespace string) error {
 	for _, service := range httpMetrics.Predictions {
-		c.requestGauge.WithLabelValues(service.Service, namespace).Set(math.Round(service.Value))
+		c.requestGauge.WithLabelValues(service.Service, namespace).Set(service.Value)
 	}
 	pusher := push.New(c.pushgatewayURL, c.jobName)
 	return pusher.Gatherer(c.registry).Push()

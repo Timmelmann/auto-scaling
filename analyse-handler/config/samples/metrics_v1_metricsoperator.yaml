@@ -9,12 +9,10 @@ metadata:
 spec:
   collector:
     endpointUrl: "http://prometheus-server.monitoring.svc.cluster.local:80"
-    metricsWindow: "12m"
-    step: "5m"
+    metricsWindow: "60m"
+    step: "1m"
     customQuery:
       query: "istio_requests_total"
-      useServiceNames: true
-      useNamespace: true
       labels:
         - destination_app
         - source_app
@@ -22,7 +20,7 @@ spec:
 
   # Analyzer configuration
   analyzer:
-    endpointUrl: "http://vanilla-scaler.webshop.svc.cluster.local:5001"
+    endpointUrl: "http://graph-based-predictor-service.metrics-operator.svc.cluster.local:80"
 
   # Pusher configuration
   pusher:
@@ -32,6 +30,7 @@ spec:
 
   # Interval in seconds between metric collections
   interval: "1m"
+  maxRetries: 3
 
   # List of applications to monitor
   applications:
@@ -39,21 +38,61 @@ spec:
     services:
       - name: "adservice"
         deploymentName: "adservice"
+        minReplicas: 1
+        maxReplicas: 10
+        targetValue: 10000
+        targetType: "Value"
       - name: "cartservice"
         deploymentName: "cartservice"
+        minReplicas: 1
+        maxReplicas: 10
+        targetValue: 10000
+        targetType: "Value"
       - name: "checkoutservice"
         deploymentName: "checkoutservice"
+        minReplicas: 1
+        maxReplicas: 10
+        targetValue: 10000
+        targetType: "Value"
       - name: "currencyservice"
         deploymentName: "currencyservice"
+        minReplicas: 1
+        maxReplicas: 10
+        targetValue: 10000
+        targetType: "Value"
       - name: "emailservice"
         deploymentName: "emailservice"
+        minReplicas: 1
+        maxReplicas: 10
+        targetValue: 10000
+        targetType: "Value"
       - name: "frontend"
         deploymentName: "frontend"
+        minReplicas: 1
+        maxReplicas: 10
+        targetValue: 10000
+        targetType: "Value"
       - name: "paymentservice"
         deploymentName: "paymentservice"
+        minReplicas: 1
+        maxReplicas: 10
+        targetValue: 10000
+        targetType: "Value"
       - name: "productcatalogservice"
         deploymentName: "productcatalogservice"
+        minReplicas: 1
+        maxReplicas: 10
+        targetValue: 10000
+        targetType: "Value"
       - name: "recommendationservice"
         deploymentName: "recommendationservice"
+        minReplicas: 1
+        maxReplicas: 10
+        targetValue: 10000
+        targetType: "Value"
       - name: "shippingservice"
         deploymentName: "shippingservice"
+        minReplicas: 1
+        maxReplicas: 10
+        targetValue: 10000
+        targetType: "Value"

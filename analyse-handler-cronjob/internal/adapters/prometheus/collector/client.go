@@ -22,9 +22,11 @@ type Client struct {
 	query             string
 	customQueryValues []domain.CustomQueryValues
 	labels            []string
+	namespace         string
+	services          []domain.Service
 }
 
-func NewClient(url, metricWindow, stepDuration, query string, useNamespace, useServiceNames bool, customQueryValues []domain.CustomQueryValues, labels []string) (*Client, error) {
+func NewClient(url, metricWindow, stepDuration, query, namespace string, useNamespace, useServiceNames bool, labels []string, services []domain.Service) (*Client, error) {
 	config := api.Config{
 		Address: url,
 	}
@@ -44,19 +46,6 @@ func NewClient(url, metricWindow, stepDuration, query string, useNamespace, useS
 		return nil, err
 	}
 
-	return &Client{
-		api:               v1.NewAPI(client),
-		metricWindow:      window,
-		step:              step,
-		query:             query,
-		useNameSpace:      useNamespace,
-		useServiceNames:   useServiceNames,
-		customQueryValues: customQueryValues,
-		labels:            labels,
-	}, nil
-}
-
-func (c *Client) CollectMetrics(ctx context.Context, namespace string, services []domain.Service) ([]domain.Metric, error) {
 	var serviceNames []string
 	for _, service := range services {
 		fmt.Println("Service Name", service.Name)
@@ -64,36 +53,21 @@ func (c *Client) CollectMetrics(ctx context.Context, namespace string, services 
 	}
 	joinedServiceNames := strings.Join(serviceNames, "|")
 	fmt.Println("Joined Services", joinedServiceNames)
-	queryComplet := fmt.Sprintf(`%s{namespace="%s",app=~"%s"}`, c.query, namespace, joinedServiceNames)
-	return c.requestMetrics(ctx, queryComplet)
+	queryComplet := fmt.Sprintf(`%s{namespace="%s",app=~"%s"}`, query, namespace, joinedServiceNames)
+
+	return &Client{
+		api:             v1.NewAPI(client),
+		metricWindow:    window,
+		step:            step,
+		query:           queryComplet,
+		useNameSpace:    useNamespace,
+		useServiceNames: useServiceNames,
+		labels:          labels,
+	}, nil
 }
 
-func (c *Client) CollectMetricsByCompleteQuery(ctx context.Context) ([]domain.Metric, error) {
-	return c.requestMetrics(ctx, c.query)
-}
-
-func (c *Client) CollectMetricsWithBuildQuery(ctx context.Context, query, namespace string, services []domain.Service) ([]domain.Metric, error) {
-	var queryKeys = ""
-	if c.useServiceNames {
-		queryKeys = fmt.Sprintf("namespace=%s", namespace)
-	}
-	if c.useServiceNames {
-		var serviceNames []string
-		for _, service := range services {
-			fmt.Println("Service Name", service.Name)
-			serviceNames = append(serviceNames, service.Name)
-		}
-		joinedServiceNames := strings.Join(serviceNames, "|")
-		queryKeys = fmt.Sprintf("%s,app=%s", queryKeys, joinedServiceNames)
-	}
-	if queryKeys != "" {
-		query = fmt.Sprintf("%s{%s}", query, queryKeys)
-	}
-	return c.requestMetrics(ctx, query)
-}
-
-func (c *Client) requestMetrics(ctx context.Context, query string) ([]domain.Metric, error) {
-	result, err := c.queryRange(ctx, query)
+func (c *Client) CollectMetrics(ctx context.Context) ([]domain.Metric, error) {
+	result, err := c.queryRange(ctx, c.query)
 	if err != nil {
 		return nil, err
 	}

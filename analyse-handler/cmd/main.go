@@ -35,7 +35,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/webhook"
 
 	metricsv1 "timmelmann/analyse-handler/api/v1"
-	"timmelmann/analyse-handler/internal/controller"
+	"timmelmann/analyse-handler/internal/adapters/controller"
 	"timmelmann/analyse-handler/internal/core/app"
 )
 

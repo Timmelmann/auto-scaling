@@ -38,49 +38,17 @@ func NewMetricsService(
 
 func (s *MetricsService) CollectAndAnalyze(ctx context.Context) error {
 
-	_, err := s.Collector.CollectMetrics(ctx, s.Namespace, s.Services)
+	metricData, err := s.Collector.CollectMetrics(ctx)
 	if err != nil {
 		return fmt.Errorf("error fetching metric: %w", err)
 	}
 
-	// httpPredictions, err := s.Predictor.PredictMetric(metricData)
-	// if err != nil {
-	// return fmt.Errorf("error analyzing metrics: %w", err)
-	// }
-	httpPredictions := domain.ScalingPrediction{Predictions: []domain.Prediction{domain.Prediction{
-		Service: "adservice",
-		Value:   1000,
-	}, domain.Prediction{
-		Service: "cartservice",
-		Value:   1000,
-	}, domain.Prediction{
-		Service: "checkoutservice",
-		Value:   1000,
-	}, domain.Prediction{
-		Service: "currencyservice",
-		Value:   1000,
-	}, domain.Prediction{
-		Service: "emailservice",
-		Value:   1000,
-	}, domain.Prediction{
-		Service: "frontend",
-		Value:   1000,
-	}, domain.Prediction{
-		Service: "paymentservice",
-		Value:   1000,
-	}, domain.Prediction{
-		Service: "productcatalogservice",
-		Value:   1000,
-	}, domain.Prediction{
-		Service: "recommendationservice",
-		Value:   1000,
-	}, domain.Prediction{
-		Service: "shippingservice",
-		Value:   1000,
-	},
-	}}
+	httpPredictions, err := s.Predictor.PredictMetric(metricData)
+	if err != nil {
+		return fmt.Errorf("error analyzing metrics: %w", err)
+	}
 
-	if err := s.Pusher.PublishScalingPrediction(httpPredictions, s.Namespace); err != nil {
+	if err := s.Pusher.PublishScalingPrediction(*httpPredictions, s.Namespace); err != nil {
 		return fmt.Errorf("error pushing predictions: %w", err)
 	}
 

@@ -34,6 +34,7 @@ type MetricsOperatorSpec struct {
 	Pusher      Pusher      `json:"pusher"`
 	Interval    string      `json:"interval"`
 	Application Application `json:"applications"`
+	MaxRetries  int         `json:"maxRetries"`
 }
 
 type Application struct {
@@ -45,6 +46,10 @@ type Application struct {
 type Service struct {
 	Name           string `json:"name"`
 	DeploymentName string `json:"deploymentName"`
+	MinReplicas    int32  `json:"minReplicas"`
+	MaxReplicas    int32  `json:"maxReplicas"`
+	TargetValue    int32  `json:"targetValue"`
+	TargetType     string `json:"targetType"`
 }
 
 type Collector struct {
@@ -55,16 +60,8 @@ type Collector struct {
 }
 
 type CustomQuery struct {
-	Query             string              `json:"query"`
-	UserServiceNames  bool                `json:"useServiceNames"`
-	UseNameSpace      bool                `json:"useNamespace"`
-	CustomQueryValues []CustomQueryValues `json:"customQueryValues"`
-	Labels            []string            `json:"labels"`
-}
-
-type CustomQueryValues struct {
-	Name   string   `json:"name"`
-	Values []string `json:"values"`
+	Query  string   `json:"query"`
+	Labels []string `json:"labels"`
 }
 
 type Analyzer struct {
@@ -88,6 +85,13 @@ type MetricsOperatorStatus struct {
 	// Fehlermeldung falls etwas schief ging
 	// +optional
 	Error string `json:"error,omitempty"`
+
+	RetryCount      int    `json:"retryCount,omitempty"`
+	LastFailureTime string `json:"lastFailureTime,omitempty"`
+	FailureReason   string `json:"failureReason,omitempty"`
+	FailureMessage  string `json:"failureMessage,omitempty"`
+	MaxRetries      int    `json:"maxRetries,omitempty"`
+	State           string `json:"state,omitempty"`
 }
 
 // +kubebuilder:object:root=true

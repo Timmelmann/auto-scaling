@@ -7,9 +7,7 @@ import (
 )
 
 type MetricCollector interface {
-	CollectMetrics(ctx context.Context, namespace string, services []domain.Service) ([]domain.Metric, error)
-	CollectMetricsWithBuildQuery(ctx context.Context, query, namespace string, services []domain.Service) ([]domain.Metric, error)
-	CollectMetricsByCompleteQuery(ctx context.Context) ([]domain.Metric, error)
+	CollectMetrics(ctx context.Context) ([]domain.Metric, error)
 }
 
 type MetricsStorage interface {

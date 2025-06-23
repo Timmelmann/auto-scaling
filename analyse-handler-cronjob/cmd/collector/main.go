@@ -15,13 +15,43 @@ import (
 
 func main() {
 	cfg := config.LoadFromEnv()
-	cfg.PrometheusURL = "http://localhost:60304"
-	cfg.PushgatewayURL = "http://localhost:57115"
-	cfg.PredictorUrl = "http://localhost:5001"
+	// cfg.PrometheusURL = "http://localhost:60304"
+	// cfg.PushgatewayURL = "http://localhost:57115"
+	// cfg.PredictorUrl = "http://localhost:5001"
 	cfg.MetricsWindow = "12m"
 	var labels = []string{"source_app", "destination_app", "reporter"}
 	// Initialize adapters
-	prometheusAdapter, err := prometheus.NewClient(cfg.PrometheusURL, cfg.MetricsWindow, "5m", "istio_requests_total", true, true, nil, labels)
+	prometheusAdapter, err := prometheus.NewClient(cfg.PrometheusURL, cfg.MetricsWindow, "1m", "istio_requests_total", "webshop", true, true, labels, []domain.Service{domain.Service{
+		Name:       "frontend",
+		Deployment: "frontend",
+	}, domain.Service{
+		Name:       "recommendationservice",
+		Deployment: "recommendationservice",
+	}, domain.Service{
+		Name:       "currencyservice",
+		Deployment: "currencyservice",
+	}, domain.Service{
+		Name:       "productcatalogservice",
+		Deployment: "productcatalogservice",
+	}, domain.Service{
+		Name:       "adservice",
+		Deployment: "adservice",
+	}, domain.Service{
+		Name:       "paymentservice",
+		Deployment: "paymentservice",
+	}, domain.Service{
+		Name:       "emailservice",
+		Deployment: "emailservice",
+	}, domain.Service{
+		Name:       "checkoutservice",
+		Deployment: "checkoutservice",
+	}, domain.Service{
+		Name:       "shippingservice",
+		Deployment: "shippingservice",
+	}, domain.Service{
+		Name:       "cartservice",
+		Deployment: "cartservice",
+	}})
 	if err != nil {
 		fmt.Printf("Error creating Prometheus client: %v\n", err)
 		os.Exit(1)
