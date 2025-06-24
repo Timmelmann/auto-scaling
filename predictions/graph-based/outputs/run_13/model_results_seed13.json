@@ -1,0 +1,81 @@
+{
+  "services": {
+    "adservice": {
+      "mae": 1278761.5,
+      "rmse": 1304204.304976793,
+      "smape": 43.413764238357544,
+      "mape": 35.53893864154816,
+      "directional_accuracy": 39.004707464694015
+    },
+    "cartservice": {
+      "mae": 3094029.0,
+      "rmse": 3186742.9506830326,
+      "smape": 65.5329167842865,
+      "mape": 49.08166825771332,
+      "directional_accuracy": 24.008069939475455
+    },
+    "checkoutservice": {
+      "mae": 2065309.375,
+      "rmse": 2102599.0510337437,
+      "smape": 58.04375410079956,
+      "mape": 44.72631514072418,
+      "directional_accuracy": 70.3429724277068
+    },
+    "currencyservice": {
+      "mae": 19808620.0,
+      "rmse": 20154546.036404986,
+      "smape": 52.79797911643982,
+      "mape": 41.58264100551605,
+      "directional_accuracy": 73.03295225285811
+    },
+    "emailservice": {
+      "mae": 245455.140625,
+      "rmse": 253498.57908871994,
+      "smape": 49.33115541934967,
+      "mape": 39.27541673183441,
+      "directional_accuracy": 39.273705447209146
+    },
+    "frontend": {
+      "mae": 22684522.0,
+      "rmse": 23063229.903536063,
+      "smape": 57.832252979278564,
+      "mape": 44.624701142311096,
+      "directional_accuracy": 70.54472091459314
+    },
+    "paymentservice": {
+      "mae": 245357.71875,
+      "rmse": 253284.14601786667,
+      "smape": 49.23714995384216,
+      "mape": 39.22610580921173,
+      "directional_accuracy": 39.34095494283793
+    },
+    "productcatalogservice": {
+      "mae": 32374862.0,
+      "rmse": 33007469.042298652,
+      "smape": 50.49094557762146,
+      "mape": 40.10992646217346,
+      "directional_accuracy": 73.03295225285811
+    },
+    "recommendationservice": {
+      "mae": 2071889.375,
+      "rmse": 2117044.282080089,
+      "smape": 44.92429196834564,
+      "mape": 36.529162526130676,
+      "directional_accuracy": 39.4754539340955
+    },
+    "shippingservice": {
+      "mae": 1412625.875,
+      "rmse": 1449545.7416777161,
+      "smape": 45.07345259189606,
+      "mape": 36.586710810661316,
+      "directional_accuracy": 39.67720242098184
+    }
+  },
+  "average": {
+    "mae": 8528143.1984375,
+    "rmse": 8689216.403779766,
+    "smape": 51.6677662730217,
+    "mape": 40.72815865278244,
+    "directional_accuracy": 50.77336919973101
+  },
+  "overfitting_detected": 

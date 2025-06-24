@@ -1,0 +1,14 @@
+ADAPTIVE LSTM RESULTS SUMMARY - SEED 42
+============================================================
+Destination          Approach   R-squared    MAPE     RMSE        
+--------------------------------------------------------------
+cartservice          standard   0.7707       6.96     248825.39   
+currencyservice      trend      -1.5225      14.51    3573366.72  
+emailservice         standard   -0.3574      12.19    82506.27    
+paymentservice       trend      -0.8234      14.33    95771.19    
+productcatalogservice standard   -2.4043      16.73    4740010.23  
+shippingservice      trend      -1.6363      15.65    322055.54   
+adservice            standard   -1.3659      14.00    526414.16   
+checkoutservice      trend      -0.0646      9.99     470441.29   
+recommendationservice standard   -1.6326      15.41    913975.02   
+frontend             standard   0.2778       8.20     4133684.86  
